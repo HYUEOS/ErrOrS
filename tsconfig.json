@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        // 모듈 임포트를 좀 더 쉽게 만들어주는 옵션이라고 한다.
+        "esModuleInterop": true,
+        // Compile Compatibility 타겟.
+        "target": "es6",
+        // any 타입 불허용 (추론 불허용).
+        "noImplicitAny": true,
+        // Classic 한 방식과 Node 한 방식이 있다.
+        // Classic 한 방식은 상대경로를 본다.
+        // Node 한 방식은 전체 플젝 디렉토리에서
+        // 해당 이름을 가진 모든 파일을 상위 폴더에서 뒤져본다.
+        "moduleResolution": "node",
+        // uglify 같은 것으로 난독화된 배포 버전의 코드를
+        // 원본으로 복호화 할 경우 필요한 힌트 파일 같은 것이라고 한다.
+        "sourceMap": true,
+        // 컴파일되는 곳.
+        "outDir": "dist",
+        // 기본 URL
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "src/types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
